@@ -1,0 +1,10 @@
+[Install]
+WantedBy=multi-user.target
+# It is required to have some sort of install. This is ta safe default because it's the last thing to start
+
+[Unit]
+Description=Turns off wifi when I should go to bed
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c '/home/admin/Documents/bedtimer.sh'
